@@ -1,0 +1,37 @@
+version: "3.7"
+services:
+  database:
+    build: 
+      context: ./database
+    restart: always
+    ports: 
+      - '5432:5432'
+    volumes:
+      - incidence-management-db:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+    depends_on:
+      - database
+    volumes:
+      - './backend:/app'
+      - '/app/node_modules'
+    ports:
+      - '4000:4000'
+
+  front-end:
+    build: 
+      context: ./front-end
+    volumes:
+      - './front-end:/app'
+      - '/app/node_modules'
+    ports:
+      - 3001:3000
+    stdin_open: true
+    depends_on:
+      - backend
+      - database
+
+volumes: 
+  incidence-management-db:
