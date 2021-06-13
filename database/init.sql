@@ -1,0 +1,1 @@
+CREATE DATABASE incident-management;
