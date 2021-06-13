@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import IncidentTable from '../../components/incident-table'
 import { host_url, edit, view } from '../../route'
 import { useHistory } from 'react-router-dom';
 import axios from 'axios'
+import IncidentTable from '../../components/IncidentTable'
 
 const SummaryContainer = (props) => {
     const history = useHistory();

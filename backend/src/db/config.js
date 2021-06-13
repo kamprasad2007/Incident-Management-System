@@ -19,12 +19,11 @@ const sequelize = new Sequelize(
 module.exports.Connect = async () => {
   try {
     await sequelize.authenticate();
-    console.log('DB Connection has been established successfully.!')
+    console.log("DB Connection has been established successfully.!");
   } catch (error) {
-    console.log(error)
+    console.log(error);
     process.exit(error);
   }
 };
-
 
 module.exports.sequelize = sequelize;

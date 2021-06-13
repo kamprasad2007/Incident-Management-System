@@ -72,7 +72,7 @@ const IncidentTable = ({
         },
       },
     ];
-  }, []);
+  }, [isAdmin, onDeleteClick, onEditClick, onViewClick]);
 
   return <Table dataSource={data} columns={columns} />;
 };

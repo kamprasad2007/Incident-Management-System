@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom';
 import { Card, Descriptions } from "antd";
 import axios from 'axios'
 import { host_url } from '../../route';
-import CommentList from '../../components/comment-list'
-import CommentEditor from '../../components/comment-editor'
+import CommentList from '../../components/CommentList'
+import CommentEditor from '../../components/CommentEditor'
 import './style.css'
 
 
@@ -14,7 +14,7 @@ const ViewContainer = () => {
     const [report, setReport] = useState();
     const [comments, setComments] = useState([]);
     const [comment, setComment] = useState({});
-    
+
     useEffect(() => {
         axios.get(`${host_url}/api/incident/${id}`).then(res => {
             setReport(res.data);
@@ -29,7 +29,7 @@ const ViewContainer = () => {
                 datetime: new Date().toISOString()
             }
         ]);
-        setComment({comment: ''})
+        setComment({ comment: '' })
     }
 
     return (
@@ -53,7 +53,7 @@ const ViewContainer = () => {
                         </Descriptions.Item>
                     </Descriptions>
                     <div className="comment">
-                        <CommentEditor onSubmit={handleSubmit} initialValues={comment}/>
+                        <CommentEditor onSubmit={handleSubmit} initialValues={comment} />
                     </div>
                 </Card>
             </div>

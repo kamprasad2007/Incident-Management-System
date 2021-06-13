@@ -10,26 +10,26 @@ module.exports = async () => {
   } = sequelize;
 
   User.create({
-    name:'Alexandra',
-    role: 'admin',
-    email: 'Alexandra@gmail.com',
+    name: "Alexandra",
+    role: "admin",
+    email: "Alexandra@gmail.com",
   });
 
   User.create({
-    name:'Nicola',
-    role: 'admin',
-    email: 'Nicola@gmail.com',
+    name: "Nicola",
+    role: "admin",
+    email: "Nicola@gmail.com",
   });
 
   User.create({
-    name:'Jane',
-    role: 'user',
-    email: 'Jane@gmail.com',
+    name: "Jane",
+    role: "user",
+    email: "Jane@gmail.com",
   });
 
   User.create({
-    name:'Mary',
-    role: 'user',
-    email: 'Mary@gmail.com',
+    name: "Mary",
+    role: "user",
+    email: "Mary@gmail.com",
   });
 };

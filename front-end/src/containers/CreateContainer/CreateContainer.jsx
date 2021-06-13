@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { HOME, host_url } from '../../route';
 import axios from 'axios';
 
-import IncidentCard from '../../components/incident-card';
+import IncidentCard from '../../components/IncidentCard';
 
 import './style.css'
 
@@ -12,8 +12,8 @@ const CreateContainer = ({ state, ...props }) => {
     const [initialValues, setInitialValues] = useState({})
 
     useEffect(() => {
-        if(state.active){
-            setInitialValues({reportedBy: state.active.name});
+        if (state.active) {
+            setInitialValues({ reportedBy: state.active.name });
         }
     }, [state.active]);
 

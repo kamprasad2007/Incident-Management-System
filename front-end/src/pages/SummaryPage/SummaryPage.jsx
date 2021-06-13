@@ -10,10 +10,10 @@ const SummaryPage = (props) => {
     return (
         <Layout>
             <Header>
-                <HeaderContainer {...props}/>
+                <HeaderContainer {...props} />
             </Header>
             <Layout>
-                <SummaryContainer {...props}/>
+                <SummaryContainer {...props} />
             </Layout>
             <Footer></Footer>
         </Layout>

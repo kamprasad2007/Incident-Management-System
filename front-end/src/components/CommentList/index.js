@@ -1,8 +1,6 @@
-import { List, Comment,} from "antd";
+import { List, Comment } from "antd";
 
-const CommentList = ({
-    comments = []
-}) => {
+const CommentList = ({ comments = [] }) => {
   return (
     <List
       dataSource={comments}

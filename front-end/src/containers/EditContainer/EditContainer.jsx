@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useHistory, useParams } from 'react-router-dom';
 import axios from 'axios'
 import { HOME, host_url } from '../../route';
-import IncidentCard from '../../components/incident-card';
+import IncidentCard from '../../components/IncidentCard';
 
-const EditContainer = ({state, ...props}) => {
+const EditContainer = ({ state, ...props }) => {
     const history = useHistory();
     const { id } = useParams();
     const [data, setData] = useState()

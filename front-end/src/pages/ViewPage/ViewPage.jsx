@@ -2,7 +2,7 @@ import React from 'react'
 import ViewContainer from '../../containers/ViewContainer'
 
 const ViewPage = () => {
-    return(
+    return (
         <ViewContainer />
     )
 }

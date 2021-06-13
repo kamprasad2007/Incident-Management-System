@@ -4,7 +4,6 @@ import { Form, Input, Button } from "antd";
 const { TextArea } = Input;
 
 const CommentEditor = ({ onSubmit, value, initialValues = {} }) => {
-
   const [form] = Form.useForm();
 
   useEffect(() => {
@@ -12,7 +11,7 @@ const CommentEditor = ({ onSubmit, value, initialValues = {} }) => {
   }, [form, initialValues]);
 
   return (
-    <Form name="addComment" onFinish={onSubmit} form={form} >
+    <Form name="addComment" onFinish={onSubmit} form={form}>
       <Form.Item name="comment">
         <TextArea rows={4} value={value} />
       </Form.Item>
