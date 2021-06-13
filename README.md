@@ -16,6 +16,12 @@ This project has 3 main services. Front-end, Backend and database. All these run
     Backend     4000
     Database    5432
 
+## Build Unit Test Image
+    docker-compose -f docker-compose.test.yml build
+    
+## Run Unit Test
+    docker-compose -f docker-compose.test.yml up
+    
 
 ## More details
 [Front-end](front-end/README.md) <br/>
