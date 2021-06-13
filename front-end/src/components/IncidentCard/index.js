@@ -75,7 +75,7 @@ const IncidentCard = ({
 
         {isEdit && (
           <Form.Item label="Assign to" name="assignedTo">
-            <Select style={{ width: 120 }} allowClear>
+            <Select style={{ width: 120 }} allowClear data-testid="assignedTo-select">
               {state.users.map((user) => (
                 <Option key={user.name} value={user.name}>
                   {user.name}{" "}
@@ -91,11 +91,12 @@ const IncidentCard = ({
             type="primary"
             htmlType="submit"
             style={{ marginRight: "10px" }}
+            data-testid="submit-btn"
           >
             {isEdit ? "UPDATE" : "CREATE"}
           </Button>
 
-          <Button onClick={onCancel}>CANCEL</Button>
+          <Button onClick={onCancel} data-testid="cancel-btn">CANCEL</Button>
         </Form.Item>
       </Form>
     </Card>

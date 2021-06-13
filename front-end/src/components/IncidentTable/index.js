@@ -48,6 +48,7 @@ const IncidentTable = ({
               <Button
                 style={{ marginRight: 20 }}
                 onClick={() => onViewClick(id)}
+                data-testid="view-btn"
               >
                 VIEW
               </Button>
@@ -56,6 +57,7 @@ const IncidentTable = ({
                 style={{ marginRight: 20 }}
                 onClick={() => onEditClick(id)}
                 disabled={!isAdmin}
+                data-testid="edit-btn"
               >
                 EDIT
               </Button>
@@ -64,6 +66,7 @@ const IncidentTable = ({
                 danger
                 onClick={() => onDeleteClick(id)}
                 disabled={!isAdmin}
+                data-testid="delete-btn"
               >
                 DELETE
               </Button>
