@@ -11,6 +11,9 @@ module.exports = (sequelize) => {
     date: {
       allowNull: false,
       type: DataTypes.DATE,
+      get() {
+        return new Date(this.getDataValue('date')).toDateString()
+      },
     },
     title: {
       allowNull: false,

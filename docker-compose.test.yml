@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  front-end-test:
+    build: 
+      context: ./front-end
+    volumes:
+      - './front-end:/app'
+    ports:
+      - 3001:3001
+    stdin_open: true
+    command: npm run test

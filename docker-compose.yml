@@ -14,8 +14,6 @@ services:
   backend:
     build:
       context: ./backend
-    volumes:
-      - './backend:/app'
     ports:
       - '4000:4000'
     depends_on:
@@ -24,8 +22,6 @@ services:
   front-end:
     build: 
       context: ./front-end
-    volumes:
-      - './front-end:/app'
     ports:
       - 3000:3000
     stdin_open: true
