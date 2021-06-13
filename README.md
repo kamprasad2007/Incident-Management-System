@@ -18,6 +18,6 @@ This project has 3 main services. Front-end, Backend and database. All these run
 
 
 ## More details
-    [Front-end](front-end/README.md)
-    [backend](backend/README.md)
-    [Database](database/README.md)
+[Front-end](front-end/README.md)
+[backend](backend/README.md)
+[Database](database/README.md)
